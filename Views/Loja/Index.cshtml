@@ -1,0 +1,17 @@
+@model List<AvaliacaoLP3Bi3.ViewModels.LojaViewModel>
+
+@{
+    ViewData["Title"] = "Lista de Lojas/Quiosques";    
+}
+
+<h1>Lojas/Quiosques</h1>
+
+<p>Número de comércios cadastrados: @Model.Count</p>
+
+@foreach(var loja in Model)
+{
+    <h3>@loja.Nome</h3>
+    <p>@loja.Piso</p>
+    <p>@loja.Descricao</p>
+    <hr>
+}
